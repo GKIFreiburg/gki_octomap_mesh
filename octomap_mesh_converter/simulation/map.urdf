@@ -1,0 +1,25 @@
+<robot name="map">
+  <link name="map">
+  
+    <inertial>
+      <mass value="0.350000" />
+      <origin xyz="0.0 0.0 0.0"/>
+      <inertia ixx="0.000469" ixy="0.000000" ixz="0.000000" iyy="0.000469" iyz="0.000000" izz="0.000197" />
+    </inertial>
+    
+    <visual>
+      <geometry>
+        <mesh filename="package://tidyup_demo_launch/simulation/map.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://tidyup_demo_launch/simulation/map.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo>
+    <static>true</static>
+    <material>Gazebo/Wood</material>
+  </gazebo>
+</robot>
