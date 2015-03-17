@@ -1,0 +1,12 @@
+<launch>
+	<arg name="package"/>
+	
+	<node pkg="octomap_mesh_converter" type="octomap_to_mesh" name="octomap_dae" output="screen" args="$(arg package)" required="true">
+	  <param name="map_path" value="maps/octomap.bt"/>
+    <param name="model_path" value="simulation/map.dae"/>
+		<param name="target_resolution" value="0.1"/>
+		<param name="script_filename" value="$(find octomap_mesh_converter)/scripts/pointcloud_to_model_0.1.mlx"/>
+    <param name="filter_z" value="true"/>
+	</node>
+	
+</launch>
